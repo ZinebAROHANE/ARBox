@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+    <app-sidebar></app-sidebar>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+        <div class="pt-3 pb-2 mb-3 border-bottom text-info">
+          <h1 class="h2">Mes fichiers</h1>
+        </div>
+        <br>
+        <div class="text-center">
+              <img src="../../../assets/box.png" width="150" alt="box">
+        </div>
+        <!--
+        <table class="displayTable">
+          <thead>
+          <tr>
+          <th>Le nom du fichier </th>
+          <th>La taille du fichier</th>
+          <th>Visualisation et télchargement</th>
+          <th>Suppression</th>
+          </tr>
+        </thead>
+      </table>
+    -->
+      <div class="displayTable">
+        <div class="row">
+          <div class="col">
+            Nom et type
+          </div>
+          <div class="col">
+            Taille 
+          </div>
+          <div class="col">
+            Visualisation et télchargement
+          </div>
+          <div class="col">
+            Suppression
+          </div>
+        </div>
+      </div>
+        
+
+        <!--
+        <div class="text-center">
+          <img src="../../../assets/box.gif" alt="welcome">
+        </div>
+      -->
+        <!-- Home page content -->
+        
+
+        
+        <div class="panel panel-primary">
+          <div *ngFor="let file of fileUploads">
+            <div class="panel-body">
+              <app-details-upload [fileUpload]='file'></app-details-upload>
+            </div>
+          </div>
+        </div>
+   
+   
+      </div>
+    </main>
+
+  </div>
+</div>

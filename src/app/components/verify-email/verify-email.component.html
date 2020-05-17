@@ -1,0 +1,32 @@
+<div class="displayTable bg-light">
+  <div class="displayTable bg-light">
+
+    <div class="px-logo">
+      <img src="../../../assets/ARBox_cloud.png" width="200" alt="ARBox_cloud">
+    </div>
+
+    <div class="authBlock">
+      <h3>Votre inscription est bien enregisté!</h3>
+
+      <div class="formGroup" *ngIf="authService.userData as user">
+        <p class="text-center">Toujours soucieux de la protection de vos données personnelles, nous vous demandons de confirmer votre inscription.</p>
+        <p class="text-center"> Un email de confirmation a été envoyé à l'adresse e-mail : <strong>{{user.email}}</strong>.</p>
+        
+      </div>
+
+      <!-- Calling SendVerificationMail() method using authService Api -->
+      <div class="formGroup">
+        <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
+          <i class="fas fa-redo-alt"></i>
+          Renvoyer l'email de confirmation
+        </button>
+      </div>
+
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Rémplir le formulaire d'<span class="redirect" routerLink="/sign-in"> Inscription</span></span>
+    </div>
+
+  </div>
+</div>

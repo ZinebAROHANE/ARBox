@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "test-f539b"
+  },
+  "targets": {
+    "test-f539b": {
+      "hosting": {
+        "ArSaveApp": [
+          "test-f539b"
+        ]
+      }
+    }
+  }
+}

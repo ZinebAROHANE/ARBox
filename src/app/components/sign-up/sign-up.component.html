@@ -1,0 +1,53 @@
+<div class="displayTable bg-light">
+  <div class="displayTableCell">
+
+    <div class="px-logo">
+        <img src="../../../assets/ARBox_cloud.png" width= "200" alt="ARBox_cloud">
+    </div>
+    <div class="text-info text-center">
+      <h3>Connectez vous à ARBox pour obtenir 1 Go de stockage gratuitement</h3>
+    </div>
+    <div class="authBlock">
+      <h3>S'inscrire</h3>
+
+      <div class="formGroup">
+        <input type="email" class="formControl" placeholder="Adresse e-mail" #userEmail required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Mot de passe" #userPwd required>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Continuer" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Ou</span></span>
+      </div>
+
+      <!-- Continue with Google -->
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Continuer avec Google
+        </button>
+      </div>
+      
+    </div>
+    <!-- 
+    <div class="redirectToLogin">
+      <span>Avez vous déjà un compte? <span class="redirect" routerLink="/sign-in">S'identifier</span></span>
+    </div>
+      -->
+    <div class="redirectToLogin">
+      Avez vous déjà un compte?
+      <a class="text-info" routerLink="/sign-in">
+        S'identifier
+      </a>
+    </div>
+
+  </div>
+ 
+
+</div>

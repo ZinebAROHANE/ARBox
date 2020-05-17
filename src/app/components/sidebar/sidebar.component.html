@@ -1,0 +1,39 @@
+<nav class="col-md-2 d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+           <br>
+           <br>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="far fa-address-card"></i>Voir le profil public
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/list" routerLinkActive="active">
+                    <i class="fas fa-cloud"></i>Mes fichiers
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/upload" routerLinkActive="active">
+                    <i class="fas fa-cloud-upload-alt"></i>Ajouter un fichier
+                </a>
+            </li>
+            <!-- download with fa fa-cloud-download -->
+
+            <!-- *********************to logout use the icon wth bootstrap glyphicon glyphicon-log-out***************** -->
+            
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">
+                    <i class="far fa-heart"></i>A propos des services de ARBox 
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="authService.SignOut()">
+                    <i class="fas fa-power-off"></i>Déconnexion
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

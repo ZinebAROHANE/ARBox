@@ -1,0 +1,52 @@
+<div class="displayTable bg-light">
+  <div class="displayTableCell">
+
+    <div class="px-logo">
+        <img src="../../../assets/ARBox_cloud.png" width= "200" alt="ARBox_cloud">
+    </div>
+
+    <div class="authBlock">
+      <h3>S'identifier</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Adresse e-mail" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Mot de passe" #userPassword required>
+      </div>
+
+      <div class="forgotPassword">
+        <div routerLink="/forgot-password">
+          <a class="text-info" >Mot de passe oublié ?</a>
+        </div>  
+      </div>
+
+      <!--  <div class="formGroup">
+        <input type="button" class="btn btn-primary" value="Connexion" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div> -->
+      <div class="formGroup">
+        <input type="button" class="btn btn-primary" value="Connexion" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Ou</span></span>
+      </div>
+
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Connexion avec Google
+        </button>
+      </div>
+   
+      <div class="redirectToLogin">
+        Nouveau sur ArSave?
+        <a class="text-info" routerLink="/register-user">
+          S'inscrire
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>

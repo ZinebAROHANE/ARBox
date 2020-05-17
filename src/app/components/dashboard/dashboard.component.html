@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+    <app-sidebar></app-sidebar>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+
+        <div class="pt-3 pb-2 mb-3 border-bottom text-info">
+          <h1 class="h2">Profile</h1>
+        </div>
+        <!-- Show user data when logged in -->
+        <div class="row" *ngIf="authService.userData as user">
+          <div class="col-md-12">
+            <div class="media">
+              <img class="align-self-start mr-5 img-thumbnail rounded user-image"
+                src="{{(user.photoURL) ? user.photoURL : '/assets/user.png'}}" alt="{{user.displayName}}">
+              <div class="media-body text-info">
+                <h1> <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                <!--<p>User ID: <strong>{{user.uid}}</strong></p>-->
+                <p> <i class="fas fa-at"></i>: <strong>{{user.email}}</strong></p>
+                <!--<p>Email Verified: <strong>{{user.emailVerified}}</strong></p>-->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</div>

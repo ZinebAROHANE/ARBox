@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+    <app-sidebar></app-sidebar>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+        <div class="pt-3 pb-2 mb-3 border-bottom text-info">
+          <h1 class="h2">Ajouter un nouveau fichier</h1>
+        </div>
+        <!--
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Ajouter un nouveau fichier</h1>
+          <i class="far fa-bell"></i><h1 id = "size" class="h5" ></h1>
+          <!--<i class="far fa-bell"></i>
+          <h5 id = "size"></h5>
+        </div>-->
+        <i class="far fa-bell"></i><h1 id = "size" class="h5" ></h1>
+        
+          <a class="text-info" routerLink="/home">
+           Espace insuffisant? Passer en Premium
+          </a>
+        
+        <div class="panel panel-primary">
+          <div class="panel-body">
+
+            <!--<div class="text-center">
+              <div class="redirectToLogin">
+                <a class="text-info" routerLink="/home">
+                 Espace insuffisant? Passer en Premium
+                </a>
+              </div>
+             <img src="../../../assets/box.png" alt="box">
+            </div>
+              -->
+            <div *ngIf="currentFileUpload" class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                attr.aria-valuenow="{{progress.percentage}}" aria-valuemin="0" aria-valuemax="100"
+                [ngStyle]="{width:progress.percentage+'%'}">
+                {{progress.percentage}}%</div>
+            </div>
+
+            <div class="text-center">
+              <label class="btn btn-default"> <i class="far fa-clone"></i><input id="file" type="file" (change)="selectFile($event)"></label>
+
+              
+              <br>
+              <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()"> <i class="far fa-save"></i>Enregistrer</button>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</div>

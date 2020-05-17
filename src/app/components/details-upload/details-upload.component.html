@@ -1,0 +1,43 @@
+<!-- last modifi
+<div class="d-flex">
+    
+
+   <a><i class="far fa-file-alt"></i>{{fileUpload.name}}</a>
+
+
+   <a>{{fileUpload.size}} octets</a>
+
+  -->
+
+   
+   <!-- <a>{{fileUpload.type}}</a> 
+    <a><i class="far fa-file-alt"></i>{{fileUpload.name.split('.').pop();}} </a>
+fas fa-cloud-download-alt 
+fas fa-trash-alt
+class="btn btn-danger btn-xs"
+-->
+
+<!-- last modifi
+ <a href="{{fileUpload.url}}"><i class="fas fa-cloud-download-alt"></i>/ <i class="fas fa-share"></i></a> &nbsp;&nbsp;
+   <button (click)='deleteFileUpload(fileUpload)' class="button buttondelete"><i class="fas fa-trash-alt"></i></button>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a><i class="far fa-file-alt"></i>{{fileUpload.name}}</a>
+    </div>
+    <div class="col">
+      <a>{{fileUpload.size}} octets</a>
+    </div>
+    <div class="col">
+      <a href="{{fileUpload.url}}"><i class="fas fa-cloud-download-alt"></i>/ <i class="fas fa-share"></i></a>
+    </div>
+    <div class="col">
+      <button (click)='deleteFileUpload(fileUpload)' class="button buttondelete"><i class="fas fa-trash-alt"></i></button>
+
+    </div>
+  
+  </div>
+</div>
